@@ -1,7 +1,7 @@
 # Better Jacobi, an interactive Laplace-Poisson PDE numerical solver
 <img src="images/capacitor.png" width="250"/> <img src="images/single_charge.png" width="250"/> <img src="images/custom.png" width="250"/>
 
-Better Jacobi is a *Python* script implementing a vectorized **[Jacobi](https://en.wikipedia.org/wiki/Jacobi_method)** method for the [Laplace-Poisson](https://en.wikipedia.org/wiki/Poisson%27s_equation) partial differential equation.
+Better Jacobi is a *Python* script implementing a vectorized **[Jacobi method](https://en.wikipedia.org/wiki/Jacobi_method)** for the [Laplace-Poisson](https://en.wikipedia.org/wiki/Poisson%27s_equation) partial differential equation.
 
 ## Dependencies
   * **python 3**
