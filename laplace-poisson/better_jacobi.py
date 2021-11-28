@@ -12,7 +12,8 @@ import argparse
 # For more information check out the argparse documentation [1]
 # [1]: https://docs.python.org/3/library/argparse.html
 parser = argparse.ArgumentParser(
-    description='Laplace-Poisson differential equation solver using Jacobi iterative method', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+    description='Laplace-Poisson differential equation solver using Jacobi iterative method',
+    formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 # positional optional argument
 parser.add_argument('target', type=float, nargs='?',
                     default=1e-8, help='Target precision for the Jacobi method')
