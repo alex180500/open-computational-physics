@@ -1,6 +1,8 @@
 # Fast Jacobi Python application for Laplace-Poisson PDE
 #
 # Author: Alessandro Romancino
+# https://github.com/alex180500/open-computational-physics
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import cm
@@ -8,9 +10,6 @@ import argparse
 
 # Argument parsing using the argparse module,
 # you can call help by using the '-h' or '--help' flag.
-#
-# For more information check out the argparse documentation [1]
-# [1]: https://docs.python.org/3/library/argparse.html
 parser = argparse.ArgumentParser(
     description='Laplace-Poisson differential equation solver using Jacobi iterative method',
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -45,12 +44,6 @@ def interactive(default_q, n_grid, x_grid, y_grid):
     An interactive function that plots an NxN grid
     and makes it possible to draw the charge field by moving the mouse
     with left click for +Q charges or right click for -Q charges.
-    It is possible to clear mistakes by holding the middle mouse button
-    This function was made by referring to the Matplotlib API [1]
-    and a stackoverflow question [2].
-
-    [1]: https://matplotlib.org/stable/api/backend_bases_api.html
-    [2]: https://stackoverflow.com/questions/31248228/matplotlib-b1-motion-mouse-motion-with-key-held-down-equivalent
 
     Parameters
     ----------
@@ -122,12 +115,7 @@ def laplace(p_new, l2_target):
     """Laplace algorithm vectorized implementation.
 
     Computes the Laplace algorithm for the potential with a vectorized
-    method using numpy. The method is based on 'Essential skills for
-    reproducible research computing' [1], 'Numerical methods for partial
-    differential equations' [2] and my course notes.
-
-    [1]: https://barbagroup.github.io/essential_skills_RRC/laplace/1/
-    [2]: https://aquaulb.github.io/book_solving_pde_mooc/solving_pde_mooc/notebooks/05_IterativeMethods/05_01_Iteration_and_2D.html
+    method using numpy.
 
     Parameters
     ----------
