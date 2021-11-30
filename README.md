@@ -2,7 +2,7 @@
 
 <img src="laplace-poisson/images/single_charge.png" width="200"/>
 
-Open Computational Physics is a collection of all of my projects made during the **Computational Physics with Laboratory** (22018) course in *[Università degli Studi di Palermo](https://www.unipa.it/)*. The course is held by professor *Grazia Cottone* and professor *Salvatore Miccichè*.
+Open Computational Physics is a collection of all of my projects made during the **Computational Physics with Laboratory** (22018) course in [*Università degli Studi di Palermo*](https://www.unipa.it/). The course is held by professor *Grazia Cottone* and professor *Salvatore Miccichè*.
 
 Special thanks to professor *Renato Lombardo* for his Python lectures and to my colleague *Enrico Di Benedetto* for the various suggestions he gave me.
 
