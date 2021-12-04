@@ -39,8 +39,7 @@ args = parser.parse_args()
 
 
 def interactive(default_q, n_grid, x_grid, y_grid):
-    """Interactive algorithm for charge placement
-
+    """
     An interactive function that plots an NxN grid
     and makes it possible to draw the charge field by moving the mouse
     with left click for +Q charges or right click for -Q charges.
@@ -91,8 +90,7 @@ def interactive(default_q, n_grid, x_grid, y_grid):
 
 
 def l2_diff(p, pn):
-    """l2 norm difference.
-
+    """
     Computes the l2 norm of the difference of the two arrays.
 
     Parameters
@@ -112,8 +110,7 @@ def l2_diff(p, pn):
 
 
 def laplace(p_new, l2_target):
-    """Laplace algorithm vectorized implementation.
-
+    """
     Computes the Laplace algorithm for the potential with a vectorized
     method using numpy.
 

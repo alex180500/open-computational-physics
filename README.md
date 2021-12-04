@@ -29,7 +29,7 @@ Python dependencies tested:
 ## TODO
 
 - [ ] molecular dynamics interactive plotting
-- [ ] heat equation
+- [ ] heat equation implicit method
 - [x] laplace-poisson interactive charge selection
 - [ ] advection pde
 - [ ] ???
