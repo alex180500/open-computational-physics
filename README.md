@@ -14,6 +14,8 @@ Please refer to the single projects README's for all the references.
 
 For the more general references we have my **courses notes** and materials, [**Python**](https://docs.python.org/3/) documentation, [**Numpy**](https://numpy.org/doc/stable/reference/) API reference and [**Matplotlib**](https://matplotlib.org/stable/tutorials/index.html) tutorials (which are incredibly handy).
 
+A main point of inspiration are the [**Numerical MOOC**](https://github.com/numerical-mooc/numerical-mooc) (*Practical Numerical Methods with Python*) lectures by professor *Lorena A. Barba*. You can view the course's Python notebook on their [Wiki](https://github.com/numerical-mooc/numerical-mooc/wiki).
+
 The simulations for Molecular Dynamics made using a modified version of the C code used in [Drexel](http://www.pages.drexel.edu/~cfa22/msim/node21.html) course **Molecular Simulations** by *Cameron Abrams*.
 
 ## Installation - Dependencies

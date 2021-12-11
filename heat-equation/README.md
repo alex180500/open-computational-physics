@@ -1,6 +1,6 @@
 # Explicit 2D, an animated Heat equation PDE solver
 
-<img src="images/default.png" height="250"/> <img src="images/none.png" height="250"/> <img src="images/north-south.png" height="250"/>
+<img src="images/default.png" height="200"/> <img src="images/none.png" height="200"/> <img src="images/north-south.png" height="200"/>
 
 Explicit 2D is a *Python* script which calculate the solution of the [Heat PDE](https://en.wikipedia.org/wiki/Heat_equation) using an explicit [**FTCS**](https://en.wikipedia.org/wiki/FTCS_scheme) scheme. You can manually set the boundary conditions!
 
