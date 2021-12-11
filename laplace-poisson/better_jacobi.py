@@ -13,25 +13,18 @@ import argparse
 parser = argparse.ArgumentParser(
     description='Laplace-Poisson differential equation solver using Jacobi iterative method',
     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-# positional optional argument
 parser.add_argument('target', type=float, nargs='?',
                     default=1e-8, help='Target precision for the Jacobi method')
-# optional float argument
 parser.add_argument('-V', type=float, default=100.0,
                     help='Default grid voltage V')
-# optional float argument
 parser.add_argument('-N', type=int, default=50,
                     help='Number N of grid points in the lattice')
-# optional float argument
 parser.add_argument('-Q', type=float, default=100.0,
                     help='Default charge value')
-# optional boolean argument
 parser.add_argument('--capacitor', action='store_true',
                     help='Turns the default voltage to a capacitor')
-# optional boolean argument
 parser.add_argument('--sinusoidal', action='store_true',
                     help='Turns the default voltage wall to a sinusoidal function')
-# optional boolean argument
 parser.add_argument('--interactive', action='store_true',
                     help='Interactive charge field')
 # arguments passed to the args class
