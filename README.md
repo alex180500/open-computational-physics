@@ -20,13 +20,14 @@ The simulations for Molecular Dynamics made using a modified version of the C co
 
 ## Installation - Dependencies
 
-Please refer to the various README of the argument you're interested with. Most of the projects make use of common Python 3 libraries.
+Please refer to the various READMEs of the argument you're interested with. Most of the projects make use of common Python 3 libraries.
 
-Python dependencies tested:
+Python packages used on all projects:
   * **python 3** (3.8+)
   * **matplotlib** (3.4+)
   * **numpy** (1.21+)
   * **scipy** (1.7+)
+  * **pillow** (8.4+)
 
 ## TODO
 
@@ -34,7 +35,7 @@ Python dependencies tested:
 - [x] heat equation 2d animated
 - [x] laplace-poisson interactive charge selection
 - [ ] advection pde
-- [ ] ???
+- [ ] euler scheme for sde
 - [ ] ???
 - [ ] ???
 - [ ] final project

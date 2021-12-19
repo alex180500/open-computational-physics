@@ -1,4 +1,3 @@
-# a python script I use to check graphs
+# a python script I use to check and make graphs
 molecular-dynamics/plotting.py
-# wip right now
-molecular-dynamics/*
+molecular-dynamics/plotting_bunch.py
