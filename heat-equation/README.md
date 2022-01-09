@@ -28,12 +28,6 @@ For all the other flags and options check out the help page or the code itself (
 $ python explicit_2d.py -h
 ```
 
-## References
-
-The argument parsing via command line is done using the **argparse** module, please refer to the [official documentation](https://docs.python.org/3/library/argparse.html) and this great [Stack Overflow answer](https://stackoverflow.com/questions/20063/whats-the-best-way-to-parse-command-line-arguments).
-
-The implementation is based upon [**Numerical MOOC**](https://github.com/numerical-mooc/numerical-mooc) (*Practical Numerical Methods with Python*) by *Lorena A. Barba*, in particular the 4th lecture about [diffusion problem](https://nbviewer.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/04_spreadout/04_03_Heat_Equation_2D_Explicit.ipynb).
-
 ## Table of diffusivity
 
 This table is a cut version of the one from [**Wikipedia**](https://en.wikipedia.org/wiki/Thermal_diffusivity), all values are in **mm^2/s** needs to be multiplied by **1e-6** before being used in the code (so they get converted to m^2/s).
@@ -59,6 +53,12 @@ This table is a cut version of the one from [**Wikipedia**](https://en.wikipedia
 | Wood (yellow pine)       | 0.082               |
 | PVC (polyvinyl chloride) | 0.08                |
 | Alcohol                  | 0.07                |
+
+## References
+
+The argument parsing via command line is done using the **argparse** module, please refer to the [official documentation](https://docs.python.org/3/library/argparse.html) and this great [Stack Overflow answer](https://stackoverflow.com/questions/20063/whats-the-best-way-to-parse-command-line-arguments).
+
+The implementation is based upon [**Numerical MOOC**](https://github.com/numerical-mooc/numerical-mooc) (*Practical Numerical Methods with Python*) by *Lorena A. Barba*, in particular the 4th lecture about [diffusion problem](https://nbviewer.org/github/numerical-mooc/numerical-mooc/blob/master/lessons/04_spreadout/04_03_Heat_Equation_2D_Explicit.ipynb).
 
 ## Dependencies
 
