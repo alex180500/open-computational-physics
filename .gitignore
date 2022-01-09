@@ -1,3 +1,4 @@
 # a python script I use to check and make graphs
 molecular-dynamics/plotting.py
 molecular-dynamics/plotting_bunch.py
+__pycache__/
