@@ -50,13 +50,13 @@ def ftcs(T0, nt, sigma_x, sigma_y):
     Parameters
     ----------
     T0 : ndarray
-        2D array containing the initial temperature field as float data.
+        2D array containing the initial temperature field as float data
     nt : int
-        number of time steps to integrate.
+        Number of time steps to integrate
     sigma_x : float
-        constant present in the FTCS method for the x axis (alpha*dt/dx^2)
+        Constant present in the FTCS method for the x axis (alpha*dt/dx^2)
     sigma_y : float
-        constant present in the FTCS method for the y axis (alpha*dt/dy^2)
+        Constant present in the FTCS method for the y axis (alpha*dt/dy^2)
 
     Returns
     -------

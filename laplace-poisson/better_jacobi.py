@@ -40,16 +40,16 @@ def interactive(default_q, n_grid, x_grid, y_grid):
     Parameters
     ----------
     p : ndarray
-        2D array containing the initial system as float data.
+        2D array containing the initial system as float data
     l2_target : float
-        Convergence target for the iterative process.
+        Convergence target for the iterative process
 
     Returns
     -------
     ndarray
-        2D array containing the system after the iterative process.
+        2D array containing the system after the iterative process
     int
-        number of iteration steps of the algorithm.
+        number of iteration steps of the algorithm
     """
     # starting field is initialized to 0
     field = np.zeros([n_grid+1, n_grid+1], dtype=float)
@@ -89,14 +89,14 @@ def l2_diff(p, pn):
     Parameters
     ----------
     p : ndarray
-        1D array containing float data.
+        1D array containing float data
     pn : ndarray
-        1D array containing float data.
+        1D array containing float data
 
     Returns
     -------
     float
-        l2 norm of the difference of the two arrays.
+        L2 norm of the difference of the two arrays
 
     """
     return np.sqrt(np.sum((p - pn)**2)/np.sum(pn**2))
@@ -110,16 +110,16 @@ def laplace(p_new, l2_target):
     Parameters
     ----------
     p : ndarray
-        2D array containing the initial system as float data.
+        2D array containing the initial system as float data
     l2_target : float
-        Convergence target for the iterative process.
+        Convergence target for the iterative process
 
     Returns
     -------
     ndarray
-        2D array containing the system after the iterative process.
+        2D array containing the system after the iterative process
     int
-        number of iteration steps of the algorithm.
+        Number of iteration steps of the algorithm
     """
     # set the norm to 1
     l2norm = 1

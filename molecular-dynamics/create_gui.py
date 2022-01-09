@@ -1,3 +1,8 @@
+# Gui interface used in phase diagram, please refer to the documentation
+#
+# Author: Alessandro Romancino
+# https://github.com/alex180500/open-computational-physics
+
 import tkinter as tk
 from tkinter import ttk
 import tkinter.font as tkFont
@@ -9,21 +14,17 @@ import cv2
 
 def plotting_data(folder, column, ylabel):
     """
-    Computes the temperature field with an explicit algorithm for nt
-    time steps. The algorithm uses a FTCS scheme with Dirichelet boundary 
-    conditions by default, with user-inputtable Neumann (zero-gradient)
-    boundary conditions at any side (N, S, W, E).
+    Plots the data of the chosen column from
+    output.txt from the selected folder 
 
     Parameters
     ----------
     folder : str
-        2D array containing the initial temperature field as float data.
+        name of the folder of output.txt
     column : int
-        number of time steps to integrate.
-    sigma_x : float
-        constant present in the FTCS method for the x axis (alpha*dt/dx^2)
-    sigma_y : float
-        constant present in the FTCS method for the y axis (alpha*dt/dy^2)
+        column number for plotting
+    ylabel : str
+        label for the y axis
     """
     data = np.loadtxt(f'{folder}/output.txt', usecols=column)
     plt.figure(figsize=(6, 5))
@@ -32,22 +33,36 @@ def plotting_data(folder, column, ylabel):
     plt.ylabel(ylabel)
     plt.grid()
     plt.xlim(0, data.size)
+    # scientific formatting
     plt.ticklabel_format(style='sci', axis='both', scilimits=(0, 0))
     plt.tight_layout()
     plt.show()
 
 
 def show_animation(folder, title):
+    """
+    CV2 simple media player of untitled.mpg from given folder.
+    You can press Q, ESC or press the x to quit.
+
+    Parameters
+    ----------
+    folder : str
+        name of the folder of untitled.mpg
+    title : str
+        window title
+    """
     vid_capture = cv2.VideoCapture(f'{folder}/untitled.mpg')
     while(vid_capture.isOpened()):
         ret, frame = vid_capture.read()
         if ret:
             cv2.imshow(title, frame)
             key = cv2.waitKey(20)
+            # pressing the x quits the animation
             if cv2.getWindowProperty(title, cv2.WND_PROP_VISIBLE) < 1:        
                 break
+            # esc or q to quit the animation
             if key == 27 or key == ord('q'):
-                break  # esc or q to quit
+                break
         else:
             break
     vid_capture.release()
@@ -56,36 +71,60 @@ def show_animation(folder, title):
 
 class gui_frame(ttk.Frame):
     def __init__(self, parent, T, rho, folder):
-        super().__init__(parent)
+        """
+        __init__ method for the gui creation.
 
+        Parameters
+        ----------
+        parent : tkinter.Tk
+            Tk frame to use with themes
+        T : float
+            Temperature used for the gui
+        rho : float
+            Density used for the gui
+        folder : str
+            Data folder
+        """
+        # activate the themed tkinter frame
+        super().__init__(parent)
+        # declare some variables
         self.T = T
         self.rho = rho
         self.folder = folder
-
+        # get a premade image for later use
         im = Image.open(f'{folder}/rdf.png')
         im = im.resize((350, 350))
         self.rdf = ImageTk.PhotoImage(im)
-
+        # create a font for the labels
         self.my_font = tkFont.Font(size=18)
-
+        # options and variables for the optionmenu
         self.option_list = {'Potential Energy': 2, 'Kinetic Energy': 3,
                             'Total Energy': 4, 'Energy Drift': 5,
                             'Temperature': 6, 'Pressure': 7}
         self.base_option = 'Potential Energy'
         self.plot_value = tk.StringVar()
-
+        # activate the main function
         self.setup_widgets()
 
     def md_plotter(self):
+        """function for the plot button, gets values from
+        the option_list dictionary, the values are the
+        specific columns of output.txt to plot."""
         print(f'Plotting: {self.plot_value.get()}')
         col = self.option_list[self.plot_value.get()]
+        # calls plotting_data
         plotting_data(self.folder, col, self.plot_value.get())
 
     def md_animation(self):
+        """Function for the animation, just need the folder
+        and the name of the window."""
         print(f'Playing video animation for T={self.T} and rho={self.rho}')
         show_animation(self.folder, f'Animation for T={self.T}, rho={self.rho}')
 
     def setup_widgets(self):
+        """The gui is divided in top_frame and bottom_frame.
+        Top frame contains labels and the animation button,
+        the bottom frame is a label frame with only the plot part."""
         self.top_frame = ttk.Frame(self, padding=(0, 0))
         self.top_frame.grid(row=0, column=0)
 
@@ -120,12 +159,11 @@ class gui_frame(ttk.Frame):
 
 
 if __name__ == '__main__':
+    # test function for testing the gui, only debug purpose
     root = tk.Tk()
     root.title('Testing Azure')
     root.tk.call('source', 'ttk-theme/azure.tcl')
     root.tk.call('set_theme', 'light')
-
     gui = gui_frame(root, 0.5, 0.1, 'data/T05_r01')
     gui.pack(fill='both', expand=True)
-
     root.mainloop()
