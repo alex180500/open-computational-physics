@@ -31,7 +31,7 @@ Python packages used on all projects:
 
 ## TODO
 
-- [ ] molecular dynamics interactive plotting
+- [x] molecular dynamics interactive plotting
 - [x] heat equation 2d animated
 - [x] laplace-poisson interactive charge selection
 - [ ] advection pde
