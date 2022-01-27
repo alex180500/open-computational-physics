@@ -35,8 +35,6 @@ Python packages used on all projects:
 - [x] molecular dynamics interactive plotting
 - [x] heat equation 2d animated
 - [x] laplace-poisson interactive charge selection
-- [ ] advection pde
-- [ ] euler scheme for sde
-- [ ] ???
-- [ ] ???
-- [ ] final project
+- [ ] sde simulator, autocorrelation and ergodicity calculator
+- [ ] agent based model
+- [ ] final project - matrix product states
