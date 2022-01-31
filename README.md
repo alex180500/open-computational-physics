@@ -35,6 +35,5 @@ Python packages used on all projects:
 - [x] molecular dynamics interactive plotting
 - [x] heat equation 2d animated
 - [x] laplace-poisson interactive charge selection
-- [ ] sde simulator, autocorrelation and ergodicity calculator
-- [ ] agent based model
-- [ ] final project - matrix product states
+- [x] agent based model (added on https://github.com/alex180500/schelling-model)
+- [ ] final project - matrix product states?
