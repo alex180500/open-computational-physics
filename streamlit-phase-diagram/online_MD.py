@@ -23,7 +23,8 @@ https://github.com/alex180500/open-computational-physics
 """)
 
 st.write('##### Radial Distribution Function')
-rdf_data = pd.read_csv(folder + '/rdf.txt', sep=' ', names=['x', 'rdf'], index_col=0)
+rdf_data = pd.read_csv(folder + '/rdf.txt', sep=' ',
+                       names=['x', 'rdf'], index_col=0)
 st.line_chart(rdf_data)
 
 st.write(f"""##### Pre-rendered Animation
@@ -31,3 +32,14 @@ Made with [VMD](https://www.ks.uiuc.edu/Research/vmd/)
 """)
 animation_data = open(folder + '/output.mp4', 'rb').read()
 st.video(animation_data)
+
+st.write('##### Data Plotter')
+option_list = ['Potential Energy', 'Kinetic Energy', 'Total Energy',
+               'Energy Drift', 'Temperature', 'Pressure']
+choosen_option = st.multiselect('What do you want to plot?', option_list)
+
+data_names = ['Step', 'Time Step'] + option_list
+output_data = pd.read_csv(folder + '/output.txt', sep=' ', index_col=0,
+                          names=data_names, usecols=['Time Step']+choosen_option, skiprows=4)
+output_data = output_data[::10]
+st.line_chart(output_data)
