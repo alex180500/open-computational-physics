@@ -36,7 +36,7 @@ For all the GUI part please refer to [Tkinter official documentation](https://do
 ## Dependencies
 
   * **Python 3**
-  * **matplotlib**
-  * **numpy**
+  * **Matplotlib**
+  * **Numpy**
   * **Pillow**
-  * **opencv-python**
+  * **OpenCV**

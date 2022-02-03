@@ -6,7 +6,7 @@ Open Computational Physics is a collection of all of my projects made during the
 
 Special thanks to professor *Renato Lombardo* for his Python lectures and to my colleague *Enrico Di Benedetto* for the various suggestions he gave me.
 
-All of the code is distributed under the [MIT License](LICENSE.md) and is free to use for any purpose.
+All of the code is distributed under the [MIT License](LICENSE) and is free to use for any purpose.
 
 ## References
 
@@ -29,6 +29,8 @@ Python packages used on all projects:
   * **scipy** (1.7+)
   * **Pillow** (8.4+)
   * **opencv-python** (4.5+)
+  * **streamlit** (1.4+)
+  * **pandas** (1.4+)
 
 ## TODO
 
@@ -36,4 +38,4 @@ Python packages used on all projects:
 - [x] heat equation 2d animated
 - [x] laplace-poisson interactive charge selection
 - [x] agent based model (added on https://github.com/alex180500/schelling-model)
-- [ ] final project - matrix product states?
+- [x] molecular dynamics interactive on streamlit

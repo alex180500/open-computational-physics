@@ -51,7 +51,7 @@ def show_animation(folder, title):
     title : str
         window title
     """
-    vid_capture = cv2.VideoCapture(f'{folder}/untitled.mpg')
+    vid_capture = cv2.VideoCapture(f'{folder}/output.mp4')
     while(vid_capture.isOpened()):
         ret, frame = vid_capture.read()
         if ret:

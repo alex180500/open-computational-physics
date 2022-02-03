@@ -62,7 +62,6 @@ The implementation is based upon [**Numerical MOOC**](https://github.com/numeric
 
 ## Dependencies
 
-  * **python 3**
-  * **matplotlib**
-  * **numpy**
-  * **argparse** (which comes with your Python installation)
+  * **Python 3**
+  * **Matplotlib**
+  * **Numpy**
